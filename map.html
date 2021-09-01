@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Markers</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+    <script src="./set.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <p id="imeival" hidden></p>
+    <p id="imsival" hidden></p>
+    <p id="sdatetime" hidden></p>
+    <p id="edatetime" hidden></p>
+    <br />
+    <div id="parent">
+      <div id="form">
+        <form action="/map.html">
+          <label for="imei">Enter imei:</label>
+          <input type="text" id="imei" name="imei" /><br /><br />
+          <label for="imsi">Enter imsi:</label>
+          <input type="text" id="imsi" name="imsi" /><br /><br />
+          <label for="sdatetime">Enter start date time :</label>
+          <input type="text" id="sdatetime" name="sdatetime" /><br /><br />
+          <label for="edatetime">Enter end date time :</label>
+          <input type="text" id="edatetime" name="edatetime" /><br /><br />
+          <input type="submit" value="Submit" onclick="change()" />
+        </form>
+      </div>
+      <div id="startstop">
+        <p hidden>Hello</p>
+      </div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=yourapikey&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>
